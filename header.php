@@ -29,8 +29,29 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" type="date" mane="action" value='cherchd' placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Chercher</button>
+    </form>
+  </div>
+  <div class=" collapse navbar-collapse" id="navbarSupportedContent">
+    <form role="form">
+      <div class="form-group">
+        <select class="form-control" id="sel1">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+
+        </select>
+        <br>
+      </div>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Chercher</button>
     </form>
   </div>
 </nav>
