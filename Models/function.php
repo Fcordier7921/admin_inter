@@ -92,6 +92,41 @@ function supriinter() //fonction suppression d'un cinter
         }
     }
 
+function recherd(){
+        
+        $bdd=connect();
+        
+        if(isset($_GET['datec']) && !empty($_GET['datec']))
+        {
+            $bdd=connect();
+            $naow=$_GET['datec']; 
+            $rech=$bdd-> query('SELECT * FROM intervention WHERE date_intervention= "' . $_GET["datec"] . '"');
+            $execte=$rech->fetchAll();
+            var_dump($execte);
+            echo "<h1>les intres vention du ".$naow." </h1>\n";
+            if(count($execte)!=NULL){
+                echo "<table >\n
+               <tr class='bg-primary' border='4'>\n
+               <td style='width: 20%; font-weight: bold;'>Numéro<br> d'intervention</td>\n
+               <td style='width: 20%; font-weight: bold;'>date d'intervention</td>\n
+               <td style='width: 57%; font-weight: bold;'>type d'intervention</td>\n
+               <td style='width: 10%; font-weight: bold;'>étage</td>\n
+               </tr>\n
+               <tr>\n";
+               echo "<td style='width: 20%;'>" .$execte['id_intervention']. "</td>\n
+               <td style='width: 20%;'>" .$execte['date_intervention']. "</td>\n
+               <td style='width: 57%;'>" .$execte['type__intervention']. "</td>\n
+               <td style='width: 10%;'>" .$execte['etage_intervention']. "</td>\n
+               </tr>\n</table>" ;
+            }
+            else{
+               echo "Aucune intervention n'a été effectuer ce jour ";
+            }
+            
+                
+                
+        }
+    }
 
 function aff_inter() //Boucle d'affichage du CRUD inter
     {
@@ -110,12 +145,4 @@ function aff_inter() //Boucle d'affichage du CRUD inter
         }
     }
 
-    function recherd(){
-        
-        $bdd=connect();
-        if(isset($_GET['action']) && $_GET['action']=="cherchd")
-        {
-
-    }else{
-        
-    }
+    
