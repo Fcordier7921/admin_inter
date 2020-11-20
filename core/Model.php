@@ -17,11 +17,11 @@ abstract class Model
     public $table;
     public $id;
 
-    public function getConnection()
+    public function getConnection()//cette fonction permet de me connecté a ma base de donné
     {
-        $this->_connexion = null;
+        $this->_connexion = null;//je met fair référence a l'objet appelent et je le met dan connexon si il est null
 
-        try {
+        try {//
             $this->_connexion = new PDO('mysql:host=' . $this->host . '; dbname=' . $this->bd_name . ';port=' . $this->port . ';charset=' . $this->charset, $this->username, $this->password);
             $this->_connexion->exec('set names utf8');
         } catch (PDOException $exception) {
@@ -34,7 +34,7 @@ abstract class Model
      *
      * @return void
      */
-    public function getAll()
+    public function getAll()//cette fonttion permet 
     {
         $sql = "SELECT * FROM " . $this->table;
         $query = $this->_connexion->prepare($sql);
