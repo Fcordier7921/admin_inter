@@ -1,3 +1,4 @@
+<!--affichage de la barre de navigation et des champ de recherche-->
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#home">Administration Immeuble</a>

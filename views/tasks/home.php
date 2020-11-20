@@ -1,3 +1,4 @@
+<!--affichage de l'adminitration des interventions-->
 <?php include(ROOTVIEW . "nav.php") ?>
 <div>
     <h1 class="border border-dark p-4 rounded-pill bg-white mt-3">Gestion des intreventions immeuble 2 route de Montaigü à Lons le Saunier</h1>
