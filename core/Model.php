@@ -36,12 +36,12 @@ abstract class Model
      */
     public function getAll()//cette fonttion permet de récupérer tout les info de la table
     {
-        $sql = "SELECT * FROM " . $this->table;
-        $query = $this->_connexion->prepare($sql);
-        $query->execute();
-        return $query->fetchAll();
+        $sql = "SELECT * FROM " . $this->table;//selection de tout le informetion de ma table 
+        $query = $this->_connexion->prepare($sql);//on prepare la requéte
+        $query->execute();//on l'exécute
+        return $query->fetchAll();//on retour tout les info
     }
-    public function findBy($datas)
+    public function findBy($datas)//cette fonction permet dla recupération de la base de donné des mot de passe
     {
         $sql = "SELECT * FROM " . $this->table;
         $conditions = [];
@@ -66,7 +66,7 @@ abstract class Model
         return $query->fetchAll();
     }
 
-    public function add($datas)
+    public function add($datas)//fonction ajouter une intervention
     {
         if (!isset($datas) || empty($datas)) {
             return false;
@@ -97,7 +97,7 @@ abstract class Model
         return    $result;
     }
 
-    public function update($datas)
+    public function update($datas)//fonction modifier une intervention
     {
         if (!isset($datas) || empty($datas)) {
             return false;
@@ -130,7 +130,7 @@ abstract class Model
 
         return    $result;
     }
-    public function delete($id)
+    public function delete($id)//fontionc suprimer une intervention
     {
         $sql = "DELETE FROM " . $this->table . " WHERE id=:id";
         $query = $this->_connexion->prepare($sql);
@@ -138,7 +138,7 @@ abstract class Model
         $query->execute();
         return true;
     }
-    public function find($id)
+    public function find($id)//fonction recherche
     {
         $sql = "SELECT * FROM " . $this->table . " where id= " . $id;
         $query = $this->_connexion->prepare($sql);
@@ -146,7 +146,7 @@ abstract class Model
         return $query->fetch();
     }
 
-    public function getOne()
+    public function getOne()//fonction recuperer un élément
     {
         $sql = "SELECT * FROM " . $this->table . " where id=" . $this->id;
         $query = $this->_connexion->prepare($sql);
