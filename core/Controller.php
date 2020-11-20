@@ -25,10 +25,10 @@ abstract class Controller//class controleur principal
         exit();
     }
 
-    public function render(string $fichier, array $data = [])//fonction  
+    public function render(string $fichier, array $data = [])//fonction  redirection ver plusieur page
     {
         extract($data);
-        $dossierView = strtolower(str_replace("Controller", "", get_class($this)));
+        $dossierView = strtolower(str_replace("Controller", "", get_class($this)));//get_class retourne un nom de la classe objet
         require_once(ROOT  . DS . 'views' . DS .  "header" . '.php');
         require_once(ROOT  . DS . 'views' . DS .  $dossierView  . DS . $fichier . '.php');
         require_once(ROOT  . DS . 'views' . DS .  "footer" . '.php');
