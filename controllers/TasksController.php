@@ -1,5 +1,5 @@
 <?php
-class TasksController extends Controller //
+class TasksController extends Controller //controleur de la page d'administration
 {
 
     //c'est une page proteger par mot de passe
@@ -28,7 +28,7 @@ class TasksController extends Controller //
         return $this->render("home", ["tasks" => $tasks, "nbEtages" => $nbEtages]);
     }
 
-    public function add_task()
+    public function add_task()//gere la vue pour l'ajout d'intervention
     {
         $formDatas = $_POST;
         $this->loadModel("InterventionModel");
@@ -36,7 +36,7 @@ class TasksController extends Controller //
         $this->redirect("tasks", "home");
     }
 
-    public function update_task()
+    public function update_task()//gére la vue pour  la modification
     {
         $formDatas = $_POST;
         $this->loadModel("InterventionModel");
@@ -44,7 +44,7 @@ class TasksController extends Controller //
         $this->redirect("tasks", "home");
     }
 
-    public function delete_task()
+    public function delete_task()//gerer la vie pour la supression 
     {
         $formDatas = $_POST;
         $this->loadModel("InterventionModel");

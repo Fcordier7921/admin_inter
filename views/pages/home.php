@@ -1,3 +1,4 @@
+<!--affichage de l'in terface de login-->
 <div class="container">
 
     <form action="/pages/login" class="form-signin" method="POST">
