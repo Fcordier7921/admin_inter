@@ -24,7 +24,7 @@ class PagesController extends Controller //controleur de redirection vers la pag
         exit();
     }
 
-    function logout()
+    function logout()//del lasession
     {
         $this->delSession("user");
         $this->redirect();
