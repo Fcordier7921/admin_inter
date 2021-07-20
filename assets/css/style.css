@@ -85,18 +85,26 @@ th {
     font-size: 1.3vw;
 }
 
+.del {
+    min-width: 120px;
+}
+
 @media screen and (max-width: 1000px) {
     .sucess {
         max-width: 56rem!important;
-    }
-    .sucess {
         font-size: 1.2vw;
+    }
+    .del {
+        min-width: 90px;
     }
 }
 
-@media screen and (max-width: 763px) {
+@media screen and (max-width: 768px) {
     .sucess {
         font-size: 1.2vw;
+    }
+    .del {
+        min-width: 65px;
     }
 }
 

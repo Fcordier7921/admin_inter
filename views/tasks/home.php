@@ -58,7 +58,7 @@
                                 <button type="button" class="sucess col-5 btn btn-primary" data-toggle="modal" data-target="#modifTask<?= $task["id"] ?>">
                                     Modifier
                                 </button>
-                                <button type="button" class="sucess col-5  btn btn-danger" data-toggle="modal"  data-target="#delTasks<?= $task["id"] ?>">
+                                <button type="button" class="sucess del col-5  btn btn-danger" data-toggle="modal"  data-target="#delTasks<?= $task["id"] ?>">
                                     Supprimer
                                 </button>
                             </div>
