@@ -21,7 +21,7 @@
             </form>
             <form class="form-inline my-2 ml-5 my-lg-0 " name="reche_mot" method="POST" action="/tasks/home">
                 <div class="form-group">
-                    <input class="form-control mr-sm-2" value="<?= isset($_SESSION["search"]["date"]) && !empty($_SESSION["search"]["date"]) ? $_SESSION["search"]["date"] : "" ?>" type="text" name="mot" placeholder="les inter " aria-label="Search">
+                    <input class="form-control mr-sm-2" value="<?= isset($_SESSION["search"]) && !empty($_SESSION["search"]) ? $_SESSION["search"] : "" ?>" type="text" name="mot" placeholder="les inter " aria-label="Search">
                 </div>
                 <div class="form-group ml-5">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Chercher par inter</button>

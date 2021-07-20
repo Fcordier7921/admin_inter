@@ -39,10 +39,10 @@
         <table class="table table-hover table-sm">
             <thead class="bg_entete_tab text-center">
                 <tr class="bg-primary">
-                    <th scope="col" style="width:5%">numéro d'intervention</th>
+                    <th scope="col" style="width:4%">n°</th>
                     <th scope="col" style="width:15%">date</th>
                     <th scope="col" style="width:40%">type d'intervention</th>
-                    <th scope="col" style="width:20%">étage</th>
+                    <th scope="col" style="width:10%">étage</th>
                     <th scope="col" style="width:20%">&nbsp;</th>
                 </tr>
             </thead>
@@ -55,10 +55,10 @@
                         <td><?= (is_null($task["etage_intervention"]) ? "tous" : $task["etage_intervention"]) ?></td>
                         <td>
                             <div class="row">
-                                <button type="button" class="col-6 btn btn-primary" data-toggle="modal" data-target="#modifTask<?= $task["id"] ?>">
+                                <button type="button" class="sucess col-5 btn btn-primary" data-toggle="modal" data-target="#modifTask<?= $task["id"] ?>">
                                     Modifier
                                 </button>
-                                <button type="button" class="col-6  btn btn-danger" data-toggle="modal" data-target="#delTasks<?= $task["id"] ?>">
+                                <button type="button" class="sucess col-5  btn btn-danger" data-toggle="modal"  data-target="#delTasks<?= $task["id"] ?>">
                                     Supprimer
                                 </button>
                             </div>
